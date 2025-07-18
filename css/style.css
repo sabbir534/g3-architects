@@ -7,6 +7,17 @@
   font-style: normal;
 }
 /* Shared styles */
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+main > section {
+  margin-top: 100px;
+}
+.section-title {
+  font-size: 3rem;
+  font-weight: 700;
+}
 .display-flex {
   display: flex;
 }
@@ -18,6 +29,9 @@
 }
 .bg-light {
   background-color: rgba(255, 144, 14, 0.1);
+}
+.text-primary {
+  color: #ff900e;
 }
 .btn-primary {
   background-color: #ff900e;
@@ -69,12 +83,46 @@
   width: 100%;
 }
 /* End of Banner Styles */
+
+/* End of Navbar Styles */
+/* Teams & Features Styles */
+.teams {
+  align-items: center;
+}
+.team-img-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+.our-features {
+  margin-left: 100px;
+  max-width: 530px;
+}
+
+#quick-list {
+  font-weight: 500;
+}
+/* End of Teams & Features Styles */
 /* responsive styles */
 @media screen and (max-width: 576px) {
   .navbar,
-  .nav-links {
+  .nav-links,
+  .teams {
     flex-direction: column;
+  }
+  .team-img-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .our-features {
+    margin-left: 18px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width: 992px) {
+  .teams {
+    flex-direction: column;
+  }
+  .our-features {
+    margin: 50px auto;
   }
 }
 /* end of responsive styles */
-/* End of Navbar Styles */
